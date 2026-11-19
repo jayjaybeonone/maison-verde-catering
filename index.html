@@ -3,155 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maison Verde Catering — Gather Beautifully</title>
-<meta name="description" content="Maison Verde Catering: full-service catering for weddings, corporate events, and private celebrations. Seasonal menus, professional staffing, and bar service.">
+<title>FOR NEM Catering Co. — Chicago's Hoodest, Ghettoest Catering Company</title>
+<meta name="description" content="FOR NEM Catering Co. — Chicago's hoodest, ghettoest catering company. Weddings, cookouts, repasts, corporate events and full bar service. South Side born. If foe nem eatin', everybody eatin'.">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --green:#1e3d2f; --green-deep:#122a20; --cream:#faf7f0; --cream-dark:#f1ead9;
-    --gold:#c9a227; --ink:#22302a; --muted:#5c6b63;
+    --ink:#0b0b0b; --ink2:#161616; --paper:#ffffff; --smoke:#f5f1ea;
+    --red:#ff2400; --gold:#c9a227; --muted:#5d5d55; --line:#e5dfd2;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
-  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.15;color:var(--green-deep)}
+  body{font-family:'Archivo',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,.anton{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.01em;text-transform:uppercase;line-height:1.05}
   a{color:inherit}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-block;background:var(--red);color:#fff;padding:14px 30px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.98rem;border:2px solid var(--red);transition:.2s;cursor:pointer}
+  .btn:hover{background:#d61e00;border-color:#d61e00}
+  .btn.ghost{background:transparent;color:#fff;border-color:#fff}
+  .btn.ghost:hover{background:#fff;color:var(--ink)}
+  .btn.dark{background:var(--ink);border-color:var(--ink)}
+  .btn.dark:hover{background:#000}
+  .kicker{letter-spacing:.3em;text-transform:uppercase;font-size:.75rem;font-weight:700;color:var(--red);text-align:center}
+  .section-title{text-align:center;font-size:clamp(2rem,4.6vw,3.1rem);margin:12px auto 14px}
+  .section-sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 50px}
+  section{padding:88px 0}
 
   /* Header */
-  header{position:sticky;top:0;z-index:10;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--cream-dark)}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-  .brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.55rem;font-weight:600;color:var(--green);letter-spacing:.02em;text-decoration:none}
-  .brand span{color:var(--gold)}
-  .nav nav a{margin-left:26px;text-decoration:none;font-size:.92rem;font-weight:500;color:var(--ink)}
-  .nav nav a:hover{color:var(--green)}
-  .btn{display:inline-block;background:var(--green);color:var(--cream);padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid var(--green);transition:.2s}
-  .btn:hover{background:var(--green-deep)}
-  .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--green-deep)}
-  .btn.gold:hover{background:#b28f1f}
-  .btn.small{padding:9px 20px}
-  @media(max-width:720px){.nav nav a:not(.btn){display:none}}
+  header{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;border-bottom:3px solid var(--red)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand img{width:46px;height:46px;display:block}
+  .brand .name{font-family:'Anton',Impact,sans-serif;font-size:1.45rem;letter-spacing:.03em;line-height:1}
+  .brand .name span{color:var(--red)}
+  .brand .sub{display:block;font-family:'Archivo',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.42em;color:var(--gold);margin-top:3px}
+  .nav nav a{margin-left:24px;text-decoration:none;font-size:.9rem;font-weight:600;color:#e8e8e8}
+  .nav nav a:hover{color:var(--red)}
+  .nav nav a.btn{color:#fff;padding:10px 22px}
+  @media(max-width:820px){.nav nav a:not(.btn){display:none}}
 
   /* Hero */
-  .hero{background:linear-gradient(160deg,var(--green) 0%,var(--green-deep) 100%);color:var(--cream);padding:96px 0 104px;text-align:center}
-  .hero .kicker{letter-spacing:.32em;text-transform:uppercase;font-size:.78rem;color:var(--gold);font-weight:600}
-  .hero h1{color:var(--cream);font-size:clamp(2.6rem,6vw,4.4rem);margin:18px auto 16px;max-width:760px}
-  .hero h1 em{color:var(--gold);font-style:italic}
-  .hero p{max-width:600px;margin:0 auto 34px;color:#dfe7df;font-size:1.08rem}
+  .hero{background:var(--ink);color:#fff;padding:92px 0 84px;text-align:center;position:relative;overflow:hidden}
+  .hero::after{content:"FOR NEM";position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);font-family:'Anton',Impact,sans-serif;font-size:clamp(8rem,26vw,22rem);color:rgba(255,255,255,.045);white-space:nowrap;pointer-events:none}
+  .hero .wrap{position:relative;z-index:1}
+  .hero .kicker{color:var(--gold)}
+  .hero h1{font-size:clamp(2.7rem,7vw,5.2rem);margin:20px auto 18px;max-width:900px}
+  .hero h1 .red{color:var(--red)}
+  .hero p{max-width:640px;margin:0 auto 34px;color:#cfcfcf;font-size:1.1rem}
+  .hero .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+  .badges span{border:1px solid #3a3a3a;border-radius:999px;padding:7px 16px;font-size:.82rem;font-weight:600;color:#e8e8e8}
+  .badges span b{color:var(--gold)}
 
-  /* Sections */
-  section{padding:84px 0}
-  .kicker{letter-spacing:.28em;text-transform:uppercase;font-size:.75rem;color:var(--gold);font-weight:600;text-align:center}
-  .section-title{text-align:center;font-size:clamp(1.9rem,4vw,2.7rem);margin:12px auto 14px}
-  .section-sub{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 48px}
+  /* Marquee */
+  .marquee{background:var(--red);color:#fff;overflow:hidden;padding:13px 0;border-block:3px solid var(--ink)}
+  .marquee .track{display:flex;gap:0;width:max-content;animation:scroll 30s linear infinite;font-family:'Anton',Impact,sans-serif;font-size:1.05rem;letter-spacing:.06em;white-space:nowrap}
+  .marquee .track span{padding:0 14px}
+  @keyframes scroll{to{transform:translateX(-50%)}}
 
   /* About */
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-  @media(max-width:820px){.about-grid{grid-template-columns:1fr}}
-  .about-grid h2{font-size:2.1rem;margin-bottom:16px}
+  .about-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:52px;align-items:center}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+  .about-grid h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:16px;text-align:left}
   .about-grid p{color:var(--muted);margin-bottom:14px}
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
-  .stat{background:#fff;border:1px solid var(--cream-dark);border-radius:14px;padding:18px;text-align:center}
-  .stat b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;color:var(--green)}
-  .stat span{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-  .about-card{background:var(--green);border-radius:20px;padding:40px;color:var(--cream)}
-  .about-card h3{color:var(--gold);font-size:1.5rem;margin-bottom:12px}
-  .about-card p{color:#dfe7df}
-  .about-card ul{list-style:none;margin-top:16px}
-  .about-card li{padding:8px 0;border-top:1px solid rgba(250,247,240,.18);font-size:.95rem}
-  .about-card li::before{content:"— ";color:var(--gold)}
+  .about-grid p b{color:var(--ink)}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .fact{background:var(--ink);color:#fff;border-radius:16px;padding:22px}
+  .fact b{display:block;font-family:'Anton',Impact,sans-serif;font-size:1.7rem;color:var(--gold);letter-spacing:.02em}
+  .fact span{font-size:.86rem;color:#cfcfcf}
 
   /* Services */
-  .services{background:#fff}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
-  .card{border:1px solid var(--cream-dark);border-radius:18px;padding:30px 26px;background:var(--cream)}
-  .card h3{font-size:1.35rem;margin-bottom:10px}
+  .services{background:var(--smoke)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 26px}
+  .card .mark{font-family:'Anton',Impact,sans-serif;color:var(--red);font-size:1.1rem;display:block;margin-bottom:12px}
+  .card h3{font-family:'Anton',Impact,sans-serif;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;margin-bottom:9px}
   .card p{color:var(--muted);font-size:.95rem}
-  .card .mark{font-size:1.5rem;color:var(--gold);display:block;margin-bottom:14px}
 
   /* Menu */
-  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-  .menu-col{background:#fff;border:1px solid var(--cream-dark);border-radius:18px;padding:30px 28px}
-  .menu-col h3{font-size:1.4rem;color:var(--green);border-bottom:2px solid var(--gold);display:inline-block;padding-bottom:6px;margin-bottom:18px}
-  .menu-col li{list-style:none;padding:9px 0;border-bottom:1px dashed var(--cream-dark);font-size:.96rem}
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+  .menu-col{border:2px solid var(--ink);border-radius:18px;padding:30px 28px;background:#fff}
+  .menu-col h3{font-family:'Anton',Impact,sans-serif;font-size:1.45rem;text-transform:uppercase;border-bottom:3px solid var(--red);display:inline-block;padding-bottom:6px;margin-bottom:16px}
+  .menu-col li{list-style:none;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.97rem;font-weight:600}
   .menu-col li:last-child{border-bottom:none}
-  .menu-col li span{display:block;color:var(--muted);font-size:.85rem}
-  .menu-note{text-align:center;color:var(--muted);margin-top:30px;font-size:.92rem}
+  .menu-col li span{display:block;color:var(--muted);font-size:.86rem;font-weight:400}
+  .menu-note{text-align:center;color:var(--muted);margin-top:28px}
 
-  /* Process */
-  .process{background:var(--green-deep);color:var(--cream)}
-  .process .section-title{color:var(--cream)}
-  .process .section-sub{color:#b9c8bd}
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
-  .step{border:1px solid rgba(250,247,240,.2);border-radius:18px;padding:30px 26px}
-  .step b{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;color:var(--gold);display:block;margin-bottom:8px}
-  .step h3{color:var(--cream);font-size:1.3rem;margin-bottom:8px}
-  .step p{color:#b9c8bd;font-size:.95rem}
+  /* Packages */
+  .packages{background:var(--ink);color:#fff}
+  .packages .section-title{color:#fff}
+  .packages .section-sub{color:#bdbdbd}
+  .packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;align-items:stretch}
+  .pack{border:2px solid #333;border-radius:20px;padding:34px 28px;background:var(--ink2);display:flex;flex-direction:column}
+  .pack.hot{border-color:var(--red);position:relative}
+  .pack .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.14em;padding:5px 14px;border-radius:999px;text-transform:uppercase}
+  .pack h3{font-family:'Anton',Impact,sans-serif;font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em}
+  .pack .price{font-family:'Anton',Impact,sans-serif;font-size:2.6rem;color:var(--gold);margin:10px 0 2px}
+  .pack .price small{font-size:1rem;color:#bdbdbd;font-family:'Archivo',sans-serif}
+  .pack ul{list-style:none;margin:18px 0 24px;flex:1}
+  .pack li{padding:7px 0;border-top:1px solid #2c2c2c;font-size:.94rem;color:#e8e8e8}
+  .pack li::before{content:"— ";color:var(--red);font-weight:700}
+  .bar-strip{margin-top:22px;border:2px dashed var(--gold);border-radius:16px;padding:22px 26px;text-align:center;color:#e8e8e8}
+  .bar-strip b{color:var(--gold);font-family:'Anton',Impact,sans-serif;letter-spacing:.03em;font-size:1.15rem;text-transform:uppercase}
+  .packs-note{text-align:center;color:#bdbdbd;margin-top:24px;font-size:.92rem}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .step{background:var(--smoke);border-radius:18px;padding:32px 28px}
+  .step b{font-family:'Anton',Impact,sans-serif;font-size:2.2rem;color:var(--red);display:block;margin-bottom:8px}
+  .step h3{font-family:'Anton',Impact,sans-serif;font-size:1.3rem;text-transform:uppercase;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:.95rem}
+
+  /* Areas */
+  .areas{background:var(--smoke)}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:820px;margin:0 auto}
+  .chips span{background:#fff;border:1.5px solid var(--ink);border-radius:999px;padding:8px 18px;font-weight:600;font-size:.92rem}
+  .chips span.hot{background:var(--red);border-color:var(--red);color:#fff}
+
+  /* FAQ */
+  .faq{max-width:800px;margin:0 auto}
+  .faq details{border-bottom:1.5px solid var(--line);padding:18px 4px}
+  .faq summary{font-weight:700;font-size:1.02rem;cursor:pointer;list-style:none}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";float:right;color:var(--red);font-weight:700}
+  .faq details[open ] summary::after{content:"–"}
+  .faq p{color:var(--muted);margin-top:8px}
 
   /* Contact */
-  .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start}
-  @media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
-  .contact-grid h2{font-size:2.1rem;margin-bottom:14px}
-  .contact-grid p{color:var(--muted)}
-  form{background:#fff;border:1px solid var(--cream-dark);border-radius:18px;padding:30px}
-  label{display:block;font-size:.85rem;font-weight:600;margin:14px 0 6px}
+  .contact{background:var(--ink);color:#fff}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:52px;align-items:start}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+  .contact h2{font-size:clamp(2rem,4.6vw,3rem);margin-bottom:16px}
+  .contact .big{font-family:'Anton',Impact,sans-serif;font-size:clamp(1.5rem,3.4vw,2.1rem);color:#fff;text-decoration:none;display:block;margin:14px 0 4px;letter-spacing:.02em}
+  .contact .big:hover{color:var(--gold)}
+  .contact .lbl{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:22px}
+  .contact p{color:#bdbdbd}
+  form{background:#fff;color:var(--ink);border-radius:20px;padding:32px}
+  label{display:block;font-size:.85rem;font-weight:700;margin:14px 0 6px}
   label:first-child{margin-top:0}
-  input,select,textarea{width:100%;padding:11px 13px;border:1px solid #d8d2c0;border-radius:10px;font:inherit;font-size:.95rem;background:var(--cream)}
-  textarea{min-height:110px;resize:vertical}
-  form .btn{margin-top:20px;width:100%;text-align:center;cursor:pointer}
-  .form-note{font-size:.82rem;color:var(--muted);margin-top:12px;text-align:center}
+  input,select,textarea{width:100%;padding:11px 13px;border:1.5px solid #d8d2c0;border-radius:10px;font:inherit;font-size:.95rem;background:var(--smoke)}
+  textarea{min-height:104px;resize:vertical}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:560px){.row{grid-template-columns:1fr}}
+  form .btn{margin-top:20px;width:100%;text-align:center}
+  .form-note{font-size:.84rem;color:var(--muted);margin-top:12px;text-align:center}
 
-  footer{background:var(--green-deep);color:#b9c8bd;padding:40px 0;text-align:center;font-size:.9rem}
-  footer .brand{color:var(--cream);display:block;margin-bottom:8px}
+  footer{background:#000;color:#9a9a9a;padding:44px 0;text-align:center;font-size:.9rem}
+  footer img{width:64px;height:64px;margin-bottom:12px}
+  footer .fname{font-family:'Anton',Impact,sans-serif;color:#fff;font-size:1.3rem;letter-spacing:.03em}
+  footer .fname span{color:var(--red)}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top">Maison <span>Verde</span></a>
+    <a class="brand" href="#top">
+      <img src="logo.svg" alt="FOR NEM Catering Co. logo">
+      <span><span class="name">FOR <span>NEM</span></span><span class="sub">CATERING CO.</span></span>
+    </a>
     <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#menu">Menus</a>
-      <a href="#process">How It Works</a>
-      <a class="btn small" href="#contact">Plan Your Event</a>
+      <a href="#menu">Da Menu</a>
+      <a href="#packages">Packages</a>
+      <a href="#how">How It Work</a>
+      <a href="#areas">Areas</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn" href="tel:+12247233035">Book Foe Nem</a>
     </nav>
   </div>
 </header>
 
 <div class="hero" id="top">
   <div class="wrap">
-    <div class="kicker">Maison Verde Catering</div>
-    <h1>Gather beautifully.<br>We handle <em>everything else.</em></h1>
-    <p>Full-service catering for weddings, corporate events, and private celebrations — seasonal menus, professional staff, and bar service, all under one roof.</p>
-    <a class="btn gold" href="#contact">Start Planning</a>
+    <div class="kicker">South Side · Chicago · Est. 2026</div>
+    <h1>Chicago's <span class="red">Hoodest, Ghettoest</span> Catering Company</h1>
+    <p>FOR NEM feed da whole function — weddings, cookouts, repasts, corporate, allat. Real food, real portions, real folks servin' it. If foe nem eatin', everybody eatin'.</p>
+    <div class="ctas">
+      <a class="btn" href="#contact">Get a Quote</a>
+      <a class="btn ghost" href="#menu">See Da Menu</a>
+    </div>
+    <div class="badges">
+      <span><b>Full-Service</b> — we cook, serve &amp; clean</span>
+      <span><b>Bar Service</b> — certified bartenders</span>
+      <span><b>25–500</b> guests</span>
+      <span><b>We pull up</b> anywhere in da city</span>
+    </div>
+  </div>
+</div>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>RIB TIPS ✦ JERK CHICKEN ✦ BAKED MAC &amp; CHEESE ✦ FRIED CATFISH ✦ ITALIAN BEEF ✦ CANDIED YAMS ✦ COLLARD GREENS ✦ PEACH COBBLER ✦ BANANA PUDDING ✦ SWEET TEA ✦</span>
+    <span>RIB TIPS ✦ JERK CHICKEN ✦ BAKED MAC &amp; CHEESE ✦ FRIED CATFISH ✦ ITALIAN BEEF ✦ CANDIED YAMS ✦ COLLARD GREENS ✦ PEACH COBBLER ✦ BANANA PUDDING ✦ SWEET TEA ✦</span>
   </div>
 </div>
 
 <section id="about">
   <div class="wrap about-grid">
     <div>
-      <h2>A table worth gathering around</h2>
-      <p>Maison Verde — "the green house" — is built on a simple idea: great events run on fresh ingredients, calm professionals, and food that people talk about on the way home.</p>
-      <p>From the first tasting to the final toast, one team plans, cooks, pours, and serves your event, so you can actually be a guest at it.</p>
-      <div class="stats">
-        <div class="stat"><b>Full</b><span>Service</span></div>
-        <div class="stat"><b>Seasonal</b><span>Menus</span></div>
-        <div class="stat"><b>Bar</b><span>Service</span></div>
-      </div>
+      <div class="kicker" style="text-align:left">Da Name</div>
+      <h2>What "For Nem" Mean</h2>
+      <p><b>Foe nem</b> — dat's yo people. Yo crew, yo family, da ones you'd feed first an' feed da most. Dat's exactly who we cook fo'.</p>
+      <p>FOR NEM Catering Co. was born on da South Side of Chicago, outta cookouts where da plates was heavy, da music was loud, an' nobody — <b>nobody</b> — left hungry. We took dat same energy pro: full-service catering wit' real seasoning, real portions, an' a crew dat show up on time an' handle everything.</p>
+      <p>Book us an' yo guests eat like family. Cause dat's da whole point.</p>
     </div>
-    <div class="about-card">
-      <h3>Every event includes</h3>
-      <p>One point of contact and a crew that has done this many times before.</p>
-      <ul>
-        <li>Custom menu planning and tasting</li>
-        <li>Professional serving and bar staff</li>
-        <li>Setup, service, and full cleanup</li>
-        <li>Rentals, linens, and coordination</li>
-      </ul>
+    <div class="facts">
+      <div class="fact"><b>25</b><span>guest minimum — no party too real</span></div>
+      <div class="fact"><b>500</b><span>guest max — we can feed da whole block</span></div>
+      <div class="fact"><b>100%</b><span>setup, service &amp; cleanup included</span></div>
+      <div class="fact"><b>24 HR</b><span>quote turnaround — tap in, we answer</span></div>
     </div>
   </div>
 </section>
@@ -159,109 +221,248 @@
 <section class="services" id="services">
   <div class="wrap">
     <div class="kicker">Services</div>
-    <h2 class="section-title">What we cater</h2>
-    <p class="section-sub">Four kinds of gatherings, one standard: nothing leaves the kitchen we wouldn't serve at our own table.</p>
+    <h2 class="section-title">What We Cater</h2>
+    <p class="section-sub">If folks gatherin', we feedin'. Six kinds of functions, one standard: plates heavy, service tight.</p>
     <div class="cards">
-      <div class="card"><span class="mark">✦</span><h3>Weddings</h3><p>Plated dinners, family-style feasts, and late-night stations — planned with you from tasting day to last dance.</p></div>
-      <div class="card"><span class="mark">✦</span><h3>Corporate Events</h3><p>Working lunches, holiday parties, and full-scale galas. On time, on budget, and invoiced the way your office needs.</p></div>
-      <div class="card"><span class="mark">✦</span><h3>Private Celebrations</h3><p>Birthdays, anniversaries, graduations, and holidays at home or at your venue — you host, we work.</p></div>
-      <div class="card"><span class="mark">✦</span><h3>Bar Service</h3><p>Licensed, certified bartenders with full bar packages: signature cocktails, wine service, and coffee to close the night.</p></div>
+      <div class="card"><span class="mark">01</span><h3>Weddings</h3><p>Rehearsals, receptions, an' late-night stations. Elegant when you want it elegant — but da food still taste like home.</p></div>
+      <div class="card"><span class="mark">02</span><h3>Cookouts &amp; Block Parties</h3><p>Our home turf. Grills, smokers, rib tips an' jerk chicken — backyard, park, or whole block shut down.</p></div>
+      <div class="card"><span class="mark">03</span><h3>Corporate &amp; Office</h3><p>Lunches, holiday parties, an' company picnics. Professional invoice, on-time delivery, food dey actually talk about Monday.</p></div>
+      <div class="card"><span class="mark">04</span><h3>Repasts &amp; Funerals</h3><p>Handled wit' care an' respect. We set up quiet, serve gentle, an' take one thing off da family's plate.</p></div>
+      <div class="card"><span class="mark">05</span><h3>Bar Service</h3><p>BASSET-certified bartenders, full bar setups, signature drinks, ice, mixers an' garnish handled. You provide da bottles or we run da whole bar — yo call.</p></div>
+      <div class="card"><span class="mark">06</span><h3>Late-Night Stations</h3><p>Italian beef, taco, wing, an' loaded-fry stations fo' when da party still goin' an' folks get hungry again.</p></div>
     </div>
   </div>
 </section>
 
 <section id="menu">
   <div class="wrap">
-    <div class="kicker">Sample Menu</div>
-    <h2 class="section-title">From the seasonal kitchen</h2>
-    <p class="section-sub">A taste of what we cook. Every menu is built for your event, your guests, and the season.</p>
+    <div class="kicker">Da Menu</div>
+    <h2 class="section-title">Heavy Plates Only</h2>
+    <p class="section-sub">Da core menu. Every event menu get built wit' you — swap, add, an' customize when you book.</p>
     <div class="menu-grid">
       <div class="menu-col">
-        <h3>To Start</h3>
+        <h3>Off Da Grill &amp; Smoker</h3>
         <ul>
-          <li>Whipped ricotta crostini <span>hot honey, thyme, grilled bread</span></li>
-          <li>Seasonal crudo <span>citrus, olive oil, flaky salt</span></li>
-          <li>Garden crudité board <span>green goddess, pickled vegetables</span></li>
-          <li>Soup of the season <span>served shooter-style for passed service</span></li>
+          <li>BBQ Rib Tips <span>smoked low, sauced or dry — Chicago style</span></li>
+          <li>Jerk Chicken <span>real jerk marinade, grilled over open flame</span></li>
+          <li>Smoked Pulled Pork <span>shoulder, smoked all day, house sauce</span></li>
+          <li>BBQ Chicken <span>leg quarters, glazed an' charred right</span></li>
+          <li>Italian Sausage &amp; Peppers <span>grilled sweet peppers an' onions</span></li>
         </ul>
       </div>
       <div class="menu-col">
-        <h3>Mains</h3>
+        <h3>Soul Food Classics</h3>
         <ul>
-          <li>Herb-roasted chicken <span>verde sauce, charred lemon</span></li>
-          <li>Slow-braised short rib <span>red wine jus, root vegetables</span></li>
-          <li>Pan-seared fish <span>brown butter, seasonal greens</span></li>
-          <li>Wild mushroom risotto <span>parmesan, truffle oil — vegetarian</span></li>
+          <li>Fried Catfish <span>cornmeal crust, hot sauce on da side</span></li>
+          <li>Baked Mac &amp; Cheese <span>four cheeses, golden top — da one everybody ask about</span></li>
+          <li>Collard Greens <span>smoked turkey, pot liquor an' all</span></li>
+          <li>Candied Yams <span>brown sugar, butter, warm spice</span></li>
+          <li>Red Beans &amp; Rice <span>slow-simmered, smoked sausage</span></li>
+          <li>Italian Beef <span>sliced thin, au jus, giardiniera — sweet or hot</span></li>
+          <li>Mostaccioli <span>baked, marinara or meat sauce</span></li>
+          <li>Cornbread &amp; Rolls <span>served warm, every package</span></li>
         </ul>
       </div>
       <div class="menu-col">
-        <h3>To Finish</h3>
+        <h3>Sweet Finish &amp; Sips</h3>
         <ul>
-          <li>Olive oil cake <span>citrus, mascarpone cream</span></li>
-          <li>Chocolate budino <span>sea salt, whipped cream</span></li>
-          <li>Seasonal fruit crostata <span>vanilla bean gelato</span></li>
-          <li>Coffee &amp; tea service <span>with petit fours</span></li>
+          <li>Peach Cobbler <span>buttery crust, served warm</span></li>
+          <li>Banana Pudding <span>wafers, whipped top — don't play wit' it</span></li>
+          <li>Pound Cake <span>classic, sliced thick</span></li>
+          <li>Sweet Tea <span>brewed fresh, properly sweet</span></li>
+          <li>Lemonade <span>regular an' strawberry</span></li>
+          <li>Soda &amp; Water Packages <span>iced down, ready to pour</span></li>
         </ul>
       </div>
     </div>
-    <p class="menu-note">Menus are tailored per event — tell us about dietary needs and favorites when you inquire.</p>
+    <p class="menu-note">Vegetarian, vegan, an' halal options available on request — foe nem include everybody.</p>
   </div>
 </section>
 
-<section class="process" id="process">
+<section class="packages" id="packages">
   <div class="wrap">
-    <div class="kicker">How It Works</div>
-    <h2 class="section-title">Three steps to event day</h2>
-    <p class="section-sub">No chaos, no surprises — a clear path from first call to final toast.</p>
+    <div class="kicker">Packages</div>
+    <h2 class="section-title">Pick Yo Package</h2>
+    <p class="section-sub">Straight prices, per person, no games. Every package include setup, serving staff, an' full cleanup.</p>
+    <div class="packs">
+      <div class="pack">
+        <h3>Da Block Party</h3>
+        <div class="price">$18<small> / person</small></div>
+        <ul>
+          <li>2 mains from da core menu</li>
+          <li>3 soul food sides</li>
+          <li>Cornbread &amp; rolls</li>
+          <li>Sweet tea &amp; lemonade</li>
+          <li>Setup + serving staff</li>
+          <li>25-guest minimum</li>
+        </ul>
+        <a class="btn ghost" href="#contact">Book Dis One</a>
+      </div>
+      <div class="pack hot">
+        <span class="tag">Most Booked</span>
+        <h3>Da Cookout</h3>
+        <div class="price">$26<small> / person</small></div>
+        <ul>
+          <li>3 mains from da core menu</li>
+          <li>4 soul food sides</li>
+          <li>1 late-night station (beef or taco)</li>
+          <li>Dessert — cobbler or banana pudding</li>
+          <li>Tea, lemonade, soda &amp; water</li>
+          <li>Full staff + full cleanup</li>
+        </ul>
+        <a class="btn" href="#contact">Book Dis One</a>
+      </div>
+      <div class="pack">
+        <h3>Da Whole Foe Nem</h3>
+        <div class="price">$38<small> / person</small></div>
+        <ul>
+          <li>Everything in Da Cookout</li>
+          <li>Appetizer hour before service</li>
+          <li>Premium main — short rib or salmon</li>
+          <li>Full dessert table</li>
+          <li>Dedicated event captain</li>
+          <li>Rentals coordination included</li>
+        </ul>
+        <a class="btn ghost" href="#contact">Book Dis One</a>
+      </div>
+    </div>
+    <div class="bar-strip">
+      <b>Add Da Bar — $14 / person</b><br>
+      BASSET-certified bartenders, full bar setup, mixers, garnish, ice an' cups. You provide da bottles, or ask us to handle da whole bar when you book.
+    </div>
+    <p class="packs-note">50% deposit locks yo date. Balance due day of da event. Prices per person before tax.</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="kicker">How It Work</div>
+    <h2 class="section-title">Three Steps, Dat's It</h2>
+    <p class="section-sub">No runaround. Tap in, lock it in, we pull up.</p>
     <div class="steps">
-      <div class="step"><b>01</b><h3>Consult</h3><p>Tell us the date, the headcount, and the feeling you're after. We draft a menu and a straight, itemized quote.</p></div>
-      <div class="step"><b>02</b><h3>Taste</h3><p>You taste the menu, we adjust it together, and we lock the timeline, rentals, and staffing plan.</p></div>
-      <div class="step"><b>03</b><h3>Gather</h3><p>We arrive early, set the room, cook, pour, and serve — then clean up like we were never there.</p></div>
+      <div class="step"><b>01</b><h3>Tap In</h3><p>Call, text, or send da form below. Tell us da date, da headcount, an' da vibe. You get a real quote back within 24 hours.</p></div>
+      <div class="step"><b>02</b><h3>Taste &amp; Lock It</h3><p>We build yo menu together — tastings available fo' weddings an' events over 100 guests. 50% deposit locks yo date in da book.</p></div>
+      <div class="step"><b>03</b><h3>We Pull Up</h3><p>We cook, set up, serve, an' clean like we was never there. You actually get to enjoy yo own function.</p></div>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<section class="areas" id="areas">
+  <div class="wrap">
+    <div class="kicker">Service Area</div>
+    <h2 class="section-title">Where We Pull Up</h2>
+    <p class="section-sub">South Side first, whole city covered. If it's in Chicago, we comin'.</p>
+    <div class="chips">
+      <span class="hot">Englewood — Home Turf</span>
+      <span>Auburn Gresham</span>
+      <span>Chatham</span>
+      <span>South Shore</span>
+      <span>Hyde Park</span>
+      <span>Bronzeville</span>
+      <span>Roseland</span>
+      <span>Beverly</span>
+      <span>Midway</span>
+      <span>Da Loop &amp; Downtown</span>
+      <span>North Side Too</span>
+      <span>All Suburbs</span>
+    </div>
+    <p class="menu-note" style="margin-top:26px">Travel fee applies past 25 miles — quoted up front, no surprises.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker">FAQ</div>
+    <h2 class="section-title">Real Questions, Real Answers</h2>
+    <p class="section-sub">Everythin' folks ask before dey book.</p>
+    <div class="faq">
+      <details><summary>How far ahead I gotta book?</summary><p>Two weeks minimum. Summer dates an' holidays go fast — da sooner you tap in, da better yo shot at lockin' yo date.</p></details>
+      <details><summary>How much is da deposit?</summary><p>50% of da total locks yo date. Da balance is due da day of da event. No date is held without a deposit — dat's how we keep it fair fo' everybody.</p></details>
+      <details><summary>What's da minimum party size?</summary><p>25 guests. Smaller than dat, ask anyway — if da date open, we might can work somethin' out.</p></details>
+      <details><summary>Can I taste da food first?</summary><p>Yeah — tastings available fo' weddings an' any event over 100 guests, once yo date is penciled in.</p></details>
+      <details><summary>What about dietary needs?</summary><p>Vegetarian, vegan, an' halal options on request. Tell us when you book an' we'll build dem into yo menu — nobody at yo function get left out.</p></details>
+      <details><summary>What's included in every package?</summary><p>Da food, serving staff, setup, serving equipment, an' full cleanup. Rentals like tables, chairs an' linens can be coordinated — included free in Da Whole Foe Nem package.</p></details>
+      <details><summary>Do y'all travel outside Chicago?</summary><p>Yeah — all suburbs. A travel fee applies past 25 miles an' it's quoted up front in yo estimate, never snuck in later.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
   <div class="wrap contact-grid">
     <div>
-      <h2>Plan your event</h2>
-      <p>Tell us about your gathering and we'll come back with menu ideas and a quote. The more you share — date, venue, headcount, favorites — the sharper the first draft.</p>
+      <div class="kicker" style="text-align:left">Book Foe Nem</div>
+      <h2>Let's Feed<br>Foe Nem</h2>
+      <p>Call or text — dat's da fastest way. Or send da form an' we'll tap back within 24 hours wit' a quote.</p>
+      <div class="lbl">Call or Text</div>
+      <a class="big" href="tel:+12247233035">(224) 723-3035</a>
+      <div class="lbl">Email</div>
+      <a class="big" href="mailto:jayv36244@gmail.com">jayv36244@gmail.com</a>
+      <div class="lbl">Hours</div>
+      <p style="margin-top:6px">Tap in 7 days a week, 9 AM – 9 PM.<br>Based in Englewood, Chicago — servin' da whole city an' suburbs.</p>
     </div>
     <form id="inquiry-form">
-      <label for="name">Your name</label>
-      <input id="name" name="name" type="text" required autocomplete="name">
+      <div class="row">
+        <div><label for="name">Yo name</label><input id="name" type="text" required autocomplete="name"></div>
+        <div><label for="phone">Phone</label><input id="phone" type="tel" required autocomplete="tel"></div>
+      </div>
       <label for="email">Email</label>
-      <input id="email" name="email" type="email" required autocomplete="email">
-      <label for="date">Event date</label>
-      <input id="date" name="date" type="date">
-      <label for="guests">Estimated guests</label>
-      <select id="guests" name="guests">
-        <option>Under 50</option>
-        <option>50–100</option>
-        <option>100–200</option>
-        <option>200+</option>
+      <input id="email" type="email" required autocomplete="email">
+      <div class="row">
+        <div><label for="date">Event date</label><input id="date" type="date"></div>
+        <div><label for="guests">How many guests</label>
+          <select id="guests">
+            <option>25–50</option><option>50–100</option><option>100–200</option><option>200–500</option>
+          </select></div>
+      </div>
+      <label for="type">What kind of function</label>
+      <select id="type">
+        <option>Wedding</option><option>Cookout / Block Party</option><option>Corporate / Office</option>
+        <option>Repast / Funeral</option><option>Bar Service Only</option><option>Somethin' Else</option>
       </select>
-      <label for="details">Tell us about your event</label>
-      <textarea id="details" name="details" placeholder="Venue, occasion, favorite foods, must-haves…"></textarea>
-      <button class="btn" type="submit">Send Inquiry</button>
-      <p class="form-note" id="form-note">We reply to every inquiry personally.</p>
+      <label for="package">Package you eyein'</label>
+      <select id="pkg">
+        <option>Da Cookout — $26/person</option><option>Da Block Party — $18/person</option>
+        <option>Da Whole Foe Nem — $38/person</option><option>Not sure yet — help me pick</option>
+      </select>
+      <label for="details">Tell us about da event</label>
+      <textarea id="details" placeholder="Venue or address, da vibe, must-have dishes, anythin' we should know…"></textarea>
+      <button class="btn" type="submit">Send It To Foe Nem</button>
+      <p class="form-note" id="form-note">Hittin' send opens yo email app wit' everything filled in — jus' press send over there an' it's in our inbox.</p>
     </form>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span class="brand">Maison <span style="color:var(--gold)">Verde</span></span>
-    Maison Verde Catering — gather beautifully.
+    <img src="logo.svg" alt="FOR NEM Catering Co. logo">
+    <div class="fname">FOR <span>NEM</span> CATERING CO.</div>
+    <p>Englewood · Chicago — Chicago's hoodest, ghettoest catering company.<br>
+    If foe nem eatin', everybody eatin'.<br><br>
+    © 2026 For Nem Catering Co. All rights reserved.</p>
   </div>
 </footer>
 
 <script>
-  // Front-end stub: wire this form to an email service or backend endpoint to receive inquiries.
   document.getElementById('inquiry-form').addEventListener('submit', function (e) {
     e.preventDefault();
+    var v = function (id) { return document.getElementById(id).value || '—'; };
+    var subject = 'FOR NEM Catering Inquiry — ' + v('type') + ' — ' + v('name');
+    var body = [
+      'Name: ' + v('name'),
+      'Phone: ' + v('phone'),
+      'Email: ' + v('email'),
+      'Event date: ' + v('date'),
+      'Guests: ' + v('guests'),
+      'Function: ' + v('type'),
+      'Package: ' + v('pkg'),
+      '',
+      'About the event:',
+      v('details')
+    ].join('\n');
+    window.location.href = 'mailto:jayv36244@gmail.com?subject=' +
+      encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     document.getElementById('form-note').textContent =
-      'Thank you — your inquiry is noted here in the demo. (Form delivery is not wired up yet.)';
+      'Yo email app should be openin\' wit\' yo inquiry filled in — jus\' press send over there. Or call/text (224) 723-3035.';
   });
 </script>
 </body>
