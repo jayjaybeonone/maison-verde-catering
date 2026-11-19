@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Verde Catering — Gather Beautifully</title>
+<meta name="description" content="Maison Verde Catering: full-service catering for weddings, corporate events, and private celebrations. Seasonal menus, professional staffing, and bar service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#1e3d2f; --green-deep:#122a20; --cream:#faf7f0; --cream-dark:#f1ead9;
+    --gold:#c9a227; --ink:#22302a; --muted:#5c6b63;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.15;color:var(--green-deep)}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:10;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--cream-dark)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.55rem;font-weight:600;color:var(--green);letter-spacing:.02em;text-decoration:none}
+  .brand span{color:var(--gold)}
+  .nav nav a{margin-left:26px;text-decoration:none;font-size:.92rem;font-weight:500;color:var(--ink)}
+  .nav nav a:hover{color:var(--green)}
+  .btn{display:inline-block;background:var(--green);color:var(--cream);padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid var(--green);transition:.2s}
+  .btn:hover{background:var(--green-deep)}
+  .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--green-deep)}
+  .btn.gold:hover{background:#b28f1f}
+  .btn.small{padding:9px 20px}
+  @media(max-width:720px){.nav nav a:not(.btn){display:none}}
+
+  /* Hero */
+  .hero{background:linear-gradient(160deg,var(--green) 0%,var(--green-deep) 100%);color:var(--cream);padding:96px 0 104px;text-align:center}
+  .hero .kicker{letter-spacing:.32em;text-transform:uppercase;font-size:.78rem;color:var(--gold);font-weight:600}
+  .hero h1{color:var(--cream);font-size:clamp(2.6rem,6vw,4.4rem);margin:18px auto 16px;max-width:760px}
+  .hero h1 em{color:var(--gold);font-style:italic}
+  .hero p{max-width:600px;margin:0 auto 34px;color:#dfe7df;font-size:1.08rem}
+
+  /* Sections */
+  section{padding:84px 0}
+  .kicker{letter-spacing:.28em;text-transform:uppercase;font-size:.75rem;color:var(--gold);font-weight:600;text-align:center}
+  .section-title{text-align:center;font-size:clamp(1.9rem,4vw,2.7rem);margin:12px auto 14px}
+  .section-sub{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 48px}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  @media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+  .about-grid h2{font-size:2.1rem;margin-bottom:16px}
+  .about-grid p{color:var(--muted);margin-bottom:14px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+  .stat{background:#fff;border:1px solid var(--cream-dark);border-radius:14px;padding:18px;text-align:center}
+  .stat b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;color:var(--green)}
+  .stat span{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .about-card{background:var(--green);border-radius:20px;padding:40px;color:var(--cream)}
+  .about-card h3{color:var(--gold);font-size:1.5rem;margin-bottom:12px}
+  .about-card p{color:#dfe7df}
+  .about-card ul{list-style:none;margin-top:16px}
+  .about-card li{padding:8px 0;border-top:1px solid rgba(250,247,240,.18);font-size:.95rem}
+  .about-card li::before{content:"— ";color:var(--gold)}
+
+  /* Services */
+  .services{background:#fff}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .card{border:1px solid var(--cream-dark);border-radius:18px;padding:30px 26px;background:var(--cream)}
+  .card h3{font-size:1.35rem;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:.95rem}
+  .card .mark{font-size:1.5rem;color:var(--gold);display:block;margin-bottom:14px}
+
+  /* Menu */
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .menu-col{background:#fff;border:1px solid var(--cream-dark);border-radius:18px;padding:30px 28px}
+  .menu-col h3{font-size:1.4rem;color:var(--green);border-bottom:2px solid var(--gold);display:inline-block;padding-bottom:6px;margin-bottom:18px}
+  .menu-col li{list-style:none;padding:9px 0;border-bottom:1px dashed var(--cream-dark);font-size:.96rem}
+  .menu-col li:last-child{border-bottom:none}
+  .menu-col li span{display:block;color:var(--muted);font-size:.85rem}
+  .menu-note{text-align:center;color:var(--muted);margin-top:30px;font-size:.92rem}
+
+  /* Process */
+  .process{background:var(--green-deep);color:var(--cream)}
+  .process .section-title{color:var(--cream)}
+  .process .section-sub{color:#b9c8bd}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .step{border:1px solid rgba(250,247,240,.2);border-radius:18px;padding:30px 26px}
+  .step b{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;color:var(--gold);display:block;margin-bottom:8px}
+  .step h3{color:var(--cream);font-size:1.3rem;margin-bottom:8px}
+  .step p{color:#b9c8bd;font-size:.95rem}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+  .contact-grid h2{font-size:2.1rem;margin-bottom:14px}
+  .contact-grid p{color:var(--muted)}
+  form{background:#fff;border:1px solid var(--cream-dark);border-radius:18px;padding:30px}
+  label{display:block;font-size:.85rem;font-weight:600;margin:14px 0 6px}
+  label:first-child{margin-top:0}
+  input,select,textarea{width:100%;padding:11px 13px;border:1px solid #d8d2c0;border-radius:10px;font:inherit;font-size:.95rem;background:var(--cream)}
+  textarea{min-height:110px;resize:vertical}
+  form .btn{margin-top:20px;width:100%;text-align:center;cursor:pointer}
+  .form-note{font-size:.82rem;color:var(--muted);margin-top:12px;text-align:center}
+
+  footer{background:var(--green-deep);color:#b9c8bd;padding:40px 0;text-align:center;font-size:.9rem}
+  footer .brand{color:var(--cream);display:block;margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Maison <span>Verde</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#menu">Menus</a>
+      <a href="#process">How It Works</a>
+      <a class="btn small" href="#contact">Plan Your Event</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="kicker">Maison Verde Catering</div>
+    <h1>Gather beautifully.<br>We handle <em>everything else.</em></h1>
+    <p>Full-service catering for weddings, corporate events, and private celebrations — seasonal menus, professional staff, and bar service, all under one roof.</p>
+    <a class="btn gold" href="#contact">Start Planning</a>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2>A table worth gathering around</h2>
+      <p>Maison Verde — "the green house" — is built on a simple idea: great events run on fresh ingredients, calm professionals, and food that people talk about on the way home.</p>
+      <p>From the first tasting to the final toast, one team plans, cooks, pours, and serves your event, so you can actually be a guest at it.</p>
+      <div class="stats">
+        <div class="stat"><b>Full</b><span>Service</span></div>
+        <div class="stat"><b>Seasonal</b><span>Menus</span></div>
+        <div class="stat"><b>Bar</b><span>Service</span></div>
+      </div>
+    </div>
+    <div class="about-card">
+      <h3>Every event includes</h3>
+      <p>One point of contact and a crew that has done this many times before.</p>
+      <ul>
+        <li>Custom menu planning and tasting</li>
+        <li>Professional serving and bar staff</li>
+        <li>Setup, service, and full cleanup</li>
+        <li>Rentals, linens, and coordination</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="kicker">Services</div>
+    <h2 class="section-title">What we cater</h2>
+    <p class="section-sub">Four kinds of gatherings, one standard: nothing leaves the kitchen we wouldn't serve at our own table.</p>
+    <div class="cards">
+      <div class="card"><span class="mark">✦</span><h3>Weddings</h3><p>Plated dinners, family-style feasts, and late-night stations — planned with you from tasting day to last dance.</p></div>
+      <div class="card"><span class="mark">✦</span><h3>Corporate Events</h3><p>Working lunches, holiday parties, and full-scale galas. On time, on budget, and invoiced the way your office needs.</p></div>
+      <div class="card"><span class="mark">✦</span><h3>Private Celebrations</h3><p>Birthdays, anniversaries, graduations, and holidays at home or at your venue — you host, we work.</p></div>
+      <div class="card"><span class="mark">✦</span><h3>Bar Service</h3><p>Licensed, certified bartenders with full bar packages: signature cocktails, wine service, and coffee to close the night.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="kicker">Sample Menu</div>
+    <h2 class="section-title">From the seasonal kitchen</h2>
+    <p class="section-sub">A taste of what we cook. Every menu is built for your event, your guests, and the season.</p>
+    <div class="menu-grid">
+      <div class="menu-col">
+        <h3>To Start</h3>
+        <ul>
+          <li>Whipped ricotta crostini <span>hot honey, thyme, grilled bread</span></li>
+          <li>Seasonal crudo <span>citrus, olive oil, flaky salt</span></li>
+          <li>Garden crudité board <span>green goddess, pickled vegetables</span></li>
+          <li>Soup of the season <span>served shooter-style for passed service</span></li>
+        </ul>
+      </div>
+      <div class="menu-col">
+        <h3>Mains</h3>
+        <ul>
+          <li>Herb-roasted chicken <span>verde sauce, charred lemon</span></li>
+          <li>Slow-braised short rib <span>red wine jus, root vegetables</span></li>
+          <li>Pan-seared fish <span>brown butter, seasonal greens</span></li>
+          <li>Wild mushroom risotto <span>parmesan, truffle oil — vegetarian</span></li>
+        </ul>
+      </div>
+      <div class="menu-col">
+        <h3>To Finish</h3>
+        <ul>
+          <li>Olive oil cake <span>citrus, mascarpone cream</span></li>
+          <li>Chocolate budino <span>sea salt, whipped cream</span></li>
+          <li>Seasonal fruit crostata <span>vanilla bean gelato</span></li>
+          <li>Coffee &amp; tea service <span>with petit fours</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="menu-note">Menus are tailored per event — tell us about dietary needs and favorites when you inquire.</p>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="kicker">How It Works</div>
+    <h2 class="section-title">Three steps to event day</h2>
+    <p class="section-sub">No chaos, no surprises — a clear path from first call to final toast.</p>
+    <div class="steps">
+      <div class="step"><b>01</b><h3>Consult</h3><p>Tell us the date, the headcount, and the feeling you're after. We draft a menu and a straight, itemized quote.</p></div>
+      <div class="step"><b>02</b><h3>Taste</h3><p>You taste the menu, we adjust it together, and we lock the timeline, rentals, and staffing plan.</p></div>
+      <div class="step"><b>03</b><h3>Gather</h3><p>We arrive early, set the room, cook, pour, and serve — then clean up like we were never there.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Plan your event</h2>
+      <p>Tell us about your gathering and we'll come back with menu ideas and a quote. The more you share — date, venue, headcount, favorites — the sharper the first draft.</p>
+    </div>
+    <form id="inquiry-form">
+      <label for="name">Your name</label>
+      <input id="name" name="name" type="text" required autocomplete="name">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required autocomplete="email">
+      <label for="date">Event date</label>
+      <input id="date" name="date" type="date">
+      <label for="guests">Estimated guests</label>
+      <select id="guests" name="guests">
+        <option>Under 50</option>
+        <option>50–100</option>
+        <option>100–200</option>
+        <option>200+</option>
+      </select>
+      <label for="details">Tell us about your event</label>
+      <textarea id="details" name="details" placeholder="Venue, occasion, favorite foods, must-haves…"></textarea>
+      <button class="btn" type="submit">Send Inquiry</button>
+      <p class="form-note" id="form-note">We reply to every inquiry personally.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">Maison <span style="color:var(--gold)">Verde</span></span>
+    Maison Verde Catering — gather beautifully.
+  </div>
+</footer>
+
+<script>
+  // Front-end stub: wire this form to an email service or backend endpoint to receive inquiries.
+  document.getElementById('inquiry-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('form-note').textContent =
+      'Thank you — your inquiry is noted here in the demo. (Form delivery is not wired up yet.)';
+  });
+</script>
+</body>
+</html>
