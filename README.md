@@ -1,6 +1,6 @@
-# FOR NEM Catering Co.
+# FOE NEM Catering Co.
 
-Landing page for **FOR NEM Catering Co.** — Chicago's hoodest, ghettoest catering company. Full-service catering for weddings, cookouts & block parties, corporate events, repasts, and bar service. South Side (Englewood), serving all of Chicago and the suburbs.
+Landing page for **FOE NEM Catering Co.** — Chicago's hoodest, ghettoest catering company. Full-service catering for weddings, cookouts & block parties, corporate events, repasts, and bar service. South Side (Englewood), serving all of Chicago and the suburbs.
 
 > If foe nem eatin', everybody eatin'.
 
@@ -11,7 +11,7 @@ Landing page for **FOR NEM Catering Co.** — Chicago's hoodest, ghettoest cater
 
 ## Live
 
-- Deployed on forge2: http://198.23.150.34/for-nem/ (the earlier `/maison-verde/` path redirects here)
+- Deployed on forge2: http://198.23.150.34/foe-nem/ (the earlier `/maison-verde/` path redirects here)
 
 ## Notes
 
